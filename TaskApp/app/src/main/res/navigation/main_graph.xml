@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="br.quixada.ufc.taskapp.ui.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="br.quixada.ufc.taskapp.ui.auth.Login"
+        android:label="fragment_tela_login"
+        tools:layout="@layout/fragment_tela_login" >
+        <action
+            android:id="@+id/action_login_to_cadastro2"
+            app:destination="@id/cadastro2" />
+        <action
+            android:id="@+id/action_login_to_recuperarConta2"
+            app:destination="@id/recuperarConta2" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastro2"
+        android:name="br.quixada.ufc.taskapp.ui.auth.Cadastro"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" />
+    <fragment
+        android:id="@+id/recuperarConta2"
+        android:name="br.quixada.ufc.taskapp.ui.auth.RecuperarConta"
+        android:label="fragment_recuperar_conta"
+        tools:layout="@layout/fragment_recuperar_conta" />
+</navigation>
