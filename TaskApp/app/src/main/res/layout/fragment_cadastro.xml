@@ -51,6 +51,7 @@
                 android:text="E-mail"
                 android:textColor="@color/white"/>
             <EditText
+                android:id="@+id/edit_email_cad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-mail"
@@ -66,6 +67,7 @@
                 android:layout_marginTop="30dp"
                 android:textColor="@color/white"/>
             <EditText
+                android:id="@+id/edit_senha_cad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Senha"
@@ -77,6 +79,7 @@
                 android:drawableRight="@drawable/ic_baseline_lock_24"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cadastrar"
                 android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

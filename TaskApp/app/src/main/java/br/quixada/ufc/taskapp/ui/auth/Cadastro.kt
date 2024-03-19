@@ -1,24 +1,33 @@
 package br.quixada.ufc.taskapp.ui.auth
 
-import android.app.Fragment
+
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import br.quixada.ufc.taskapp.R
+import br.quixada.ufc.taskapp.databinding.FragmentCadastroBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 
 class Cadastro : Fragment() {
+
+    private var _binding: FragmentCadastroBinding? = null
+    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        _binding = FragmentCadastroBinding.inflate(layoutInflater, container, false )
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cadastro, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }
