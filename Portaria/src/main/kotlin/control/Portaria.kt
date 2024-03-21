@@ -1,17 +1,22 @@
-package org.example
+package org.example.control
 
 class Portaria {
 
-    fun controle(){
+    init{
+        println("Portaria inicializada" )
+        println(controle())
+    }
+    private fun controle(): String{
         val idade = Console.readInt("Qual a sua idade?")
 
         if(idade < 18){
-            println("Negado. Menores de idade não são permintidos!")
-            return
+            return "Negado. Menores de idade não são permintidos!"
         }
 
         val tipoConvite = Console.readString("Qual é o tipo de convite?")
         println(tipoConvite)
+
+        return "TODO"
     }
 }
 

@@ -1,4 +1,4 @@
-package org.example
+package org.example.control
 
 class Console private constructor() {
     companion object{
