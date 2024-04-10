@@ -1,7 +1,9 @@
 package org.example.control
 
-class Portaria {
+import org.example.business.ConviteBusiness
 
+class Portaria {
+    private val conviteBusiness = ConviteBusiness()
     init{
         println("Portaria inicializada" )
         println(controle())
@@ -14,6 +16,7 @@ class Portaria {
         }
 
         val tipoConvite = Console.readString("Qual é o tipo de convite?")
+        conviteBusiness.validInvitationType(tipoConvite)
         println(tipoConvite)
 
         return "TODO"
